@@ -56,7 +56,7 @@ router.delete('/:noteId', async (req, res) => {
         if (!note) {
             return res.status(404).send({ error: 'Note not found' });
         }
-        res.status(204).send();
+        res.status(201).send('Deleted Successfully!');
     } catch (error) {
         res.status(500).send({ error: 'Unable to delete the note', details: error.message });
     }
